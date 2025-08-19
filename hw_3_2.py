@@ -11,6 +11,9 @@ def get_numbers_ticket(min, max, quantity):
 
     if (max - min) < quantity:
         return list_of_random_numbers
+    
+    if not (1 <= min < max <= 1000): 
+        return list_of_random_numbers
 
     if min >= 1 and max <= 1000:
         for i in range(min,max):
@@ -22,4 +25,5 @@ def get_numbers_ticket(min, max, quantity):
     return result
 
 
-#print(get_numbers_ticket(10,14,6))
+# print(get_numbers_ticket(-10,10,5))
+
