@@ -27,3 +27,19 @@ def get_numbers_ticket(min, max, quantity):
 
 # print(get_numbers_ticket(-10,10,5))
 
+# Функція № 2 варіант 2
+import random
+
+def get_numbers_ticket(min, max, quantity):
+    """
+    Генерує вказану кількість унікальних чисел у діапазоні [min, max]
+    та повертає відсортований список.
+    """
+    if (max - min + 1) < quantity:
+        return []
+    
+    if not (1 <= min < max <= 1000):
+        return []
+
+    result = random.sample(range(min, max + 1), quantity)
+    return sorted(result)
